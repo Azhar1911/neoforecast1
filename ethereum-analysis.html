@@ -1,0 +1,1190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ethereum Breaks Out of Downtrend - Neo Forecasts</title>
+    <meta name="description" content="Detailed NeoWave analysis of Ethereum showing breakout from downtrend and potential price targets.">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #1a365d;
+            --secondary-color: #2d5a87;
+            --accent-color: #3182ce;
+            --gold-accent: #d69e2e;
+            --text-primary: #1a202c;
+            --text-secondary: #4a5568;
+            --text-light: #718096;
+            --bg-primary: #ffffff;
+            --bg-secondary: #f7fafc;
+            --bg-dark: #1a202c;
+            --border-color: #e2e8f0;
+            --shadow-light: 0 1px 3px rgba(0,0,0,0.1);
+            --shadow-medium: 0 4px 6px rgba(0,0,0,0.1);
+            --shadow-heavy: 0 20px 25px rgba(0,0,0,0.15);
+            --gradient-primary: linear-gradient(135deg, #1a365d 0%, #2d5a87 100%);
+            --gradient-accent: linear-gradient(135deg, #3182ce 0%, #2b77cb 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.7;
+            color: var(--text-primary);
+            background-color: var(--bg-primary);
+        }
+
+        /* Header & Navigation */
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--gradient-primary);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: var(--text-primary);
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-link:hover {
+            color: var(--accent-color);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background: var(--accent-color);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Blog Post Styles */
+        .blog-post {
+            padding: 120px 0 80px;
+            background: var(--bg-secondary);
+            min-height: 100vh;
+        }
+
+        .post-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .post-header {
+            background: white;
+            border-radius: 16px;
+            padding: 3rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow-light);
+            border: 1px solid var(--border-color);
+        }
+
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        .breadcrumb a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .post-meta {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        .post-category {
+            background: var(--gold-accent);
+            color: white;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .post-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            font-weight: 700;
+            line-height: 1.2;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .post-excerpt {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        .post-content {
+            background: white;
+            border-radius: 16px;
+            padding: 3rem;
+            box-shadow: var(--shadow-light);
+            border: 1px solid var(--border-color);
+        }
+
+        .chart-image {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            margin: 2rem 0;
+            box-shadow: var(--shadow-medium);
+            display: block;
+        }
+
+        .post-content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+        }
+
+        .price-targets {
+            background: linear-gradient(135deg, rgba(49, 130, 206, 0.1) 0%, rgba(45, 90, 135, 0.1) 100%);
+            border-left: 4px solid var(--accent-color);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+        }
+
+        .price-targets h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .target-item {
+            margin-bottom: 0.8rem;
+            font-weight: 500;
+        }
+
+        .target-weak {
+            color: #e53e3e;
+        }
+
+        .target-likely {
+            color: #38a169;
+        }
+
+        .target-strong {
+            color: #3182ce;
+        }
+
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--gradient-accent);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-medium);
+            margin-bottom: 2rem;
+        }
+
+        .back-button:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-heavy);
+        }
+
+        /* Post Actions */
+        .post-actions {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            padding: 2rem 0;
+            margin-top: 2rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .action-btn {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: none;
+            border: 2px solid var(--border-color);
+            color: var(--text-secondary);
+            font-size: 1rem;
+            cursor: pointer;
+            padding: 12px 20px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .action-btn:hover {
+            background: var(--accent-color);
+            color: white;
+            border-color: var(--accent-color);
+            transform: translateY(-2px);
+        }
+
+        .action-btn.liked {
+            color: #e53e3e;
+            border-color: #e53e3e;
+        }
+
+        .action-btn i {
+            font-size: 1.2rem;
+        }
+
+        /* Comment Section */
+        .comments-section {
+            background: white;
+            border-radius: 16px;
+            padding: 3rem;
+            margin-top: 2rem;
+            box-shadow: var(--shadow-light);
+            border: 1px solid var(--border-color);
+        }
+
+        .comments-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .comments-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        .comments-count {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Comment Form */
+        .comment-form {
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background: var(--bg-secondary);
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+        }
+
+        .comment-form h3 {
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+            font-size: 1.2rem;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            font-size: 0.9rem;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid var(--border-color);
+            border-radius: 8px;
+            font-size: 0.9rem;
+            transition: border-color 0.3s ease;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--accent-color);
+        }
+
+        .comment-textarea {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid var(--border-color);
+            border-radius: 8px;
+            font-size: 0.9rem;
+            transition: border-color 0.3s ease;
+            font-family: 'Inter', sans-serif;
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .comment-textarea:focus {
+            outline: none;
+            border-color: var(--accent-color);
+        }
+
+        .comment-submit {
+            background: var(--gradient-accent);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .comment-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        /* Comments List */
+        .comments-list {
+            margin-top: 2rem;
+        }
+
+        .comment {
+            background: var(--bg-secondary);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+        .comment:hover {
+            box-shadow: var(--shadow-light);
+        }
+
+        .comment-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .comment-author {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .author-avatar {
+            width: 40px;
+            height: 40px;
+            background: var(--gradient-accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .author-info h4 {
+            font-weight: 600;
+            color: var(--primary-color);
+            font-size: 0.95rem;
+        }
+
+        .comment-time {
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+
+        .comment-text {
+            color: var(--text-primary);
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .comment-actions {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .comment-action {
+            background: none;
+            border: none;
+            color: var(--text-light);
+            font-size: 0.85rem;
+            cursor: pointer;
+            padding: 0.5rem;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .comment-action:hover {
+            background: var(--border-color);
+            color: var(--accent-color);
+        }
+
+        /* Reply Form */
+        .reply-form {
+            margin-top: 1rem;
+            padding: 1rem;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            display: none;
+        }
+
+        .reply-form.active {
+            display: block;
+        }
+
+        .reply-textarea {
+            width: 100%;
+            padding: 10px 12px;
+            border: 2px solid var(--border-color);
+            border-radius: 6px;
+            font-size: 0.9rem;
+            resize: vertical;
+            min-height: 80px;
+            margin-bottom: 1rem;
+        }
+
+        .reply-submit {
+            background: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .reply-submit:hover {
+            background: var(--secondary-color);
+        }
+
+        /* Replies */
+        .replies {
+            margin-top: 1rem;
+            margin-left: 2rem;
+            border-left: 2px solid var(--border-color);
+            padding-left: 1rem;
+        }
+
+        .reply {
+            background: white;
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border: 1px solid var(--border-color);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--bg-dark);
+            color: white;
+            padding: 60px 0 30px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-brand {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .footer-description {
+            color: #a0aec0;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background: var(--accent-color);
+            transform: translateY(-2px);
+        }
+
+        .footer-title {
+            font-weight: 600;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-links a {
+            color: #a0aec0;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #2d3748;
+            padding-top: 2rem;
+            text-align: center;
+            color: #a0aec0;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .post-title {
+                font-size: 2.2rem;
+            }
+
+            .post-header, .post-content, .comments-section {
+                padding: 2rem;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .post-actions {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .replies {
+                margin-left: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                Neo Forecasts
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html#home" class="nav-link">Home</a></li>
+                <li><a href="index.html#forecasts" class="nav-link">Forecasts</a></li>
+                <li><a href="index.html#services" class="nav-link">Services</a></li>
+                <li><a href="index.html#about" class="nav-link">About</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Blog Post -->
+    <main class="blog-post">
+        <div class="post-container">
+            <a href="index.html" class="back-button" data-aos="fade-right">
+                <i class="fas fa-arrow-left"></i>
+                Back to Forecasts
+            </a>
+
+            <article class="post-header" data-aos="fade-up">
+                <nav class="breadcrumb">
+                    <a href="index.html">Home</a>
+                    <i class="fas fa-chevron-right"></i>
+                    <a href="index.html#forecasts">Forecasts</a>
+                    <i class="fas fa-chevron-right"></i>
+                    <span>Ethereum Analysis</span>
+                </nav>
+
+                <div class="post-meta">
+                    <span class="post-category">Crypto</span>
+                    <span><i class="far fa-calendar"></i> May 27, 2025</span>
+                    <span><i class="far fa-clock"></i> 3 min read</span>
+                    <span><i class="far fa-user"></i> Neo Forecasts Team</span>
+                </div>
+
+                <h1 class="post-title">Ethereum Breaks Out of Downtrend</h1>
+                
+                <p class="post-excerpt">The rally we're seeing right now shows Ethereum breaking out of its downtrend and starting a new uptrend. The strength of this rally sets the tone for where the price heads next.</p>
+            </article>
+
+            <div class="post-content" data-aos="fade-up" data-aos-delay="200">
+                <img src="ETHUSD_2025-05-27_18-57-22.png" alt="Ethereum NeoWave Chart Analysis" class="chart-image">
+
+                <p>The rally we're seeing right now shows Ethereum breaking out of its downtrend and starting a new uptrend.</p>
+
+                <p>The strength of this rally sets the tone for where the price heads next.</p>
+
+                <div class="price-targets">
+                    <h3>Price Target Scenarios</h3>
+                    <div class="target-item target-weak">
+                        <strong>Weak rally:</strong> Could see prices hit $2,800–$3,400. But given how strong this rally looks, this feels unlikely.
+                    </div>
+                    <div class="target-item target-likely">
+                        <strong>Most likely zone:</strong> I'm betting on $3,800–$4,600. This range seems realistic based on the current momentum.
+                    </div>
+                    <div class="target-item target-strong">
+                        <strong>Strong rally:</strong> If things really take off, we could see $5,000 or higher.
+                    </div>
+                </div>
+
+                <p>As for timing, I'm looking at a window of 365 to 700 days, but honestly, that's too broad to be super helpful, so this is not of much help.</p>
+
+                <div class="post-actions">
+                    <button class="action-btn" onclick="toggleLike(this)">
+                        <i class="far fa-heart"></i>
+                        <span>28</span>
+                    </button>
+                    <button class="action-btn" onclick="scrollToComments()">
+                        <i class="far fa-comment"></i>
+                        <span id="commentCount">3</span>
+                    </button>
+                    <button class="action-btn" onclick="sharePost(this)">
+                        <i class="fas fa-share"></i>
+                        <span>Share</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Comments Section -->
+            <div class="comments-section" id="commentsSection" data-aos="fade-up" data-aos-delay="400">
+                <div class="comments-header">
+                    <h2 class="comments-title">Discussion</h2>
+                    <span class="comments-count"><span id="totalComments">3</span> comments</span>
+                </div>
+
+                <!-- Comment Form -->
+                <div class="comment-form">
+                    <h3>Join the conversation</h3>
+                    <form id="commentForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="commentName" class="form-label">Name *</label>
+                                <input type="text" id="commentName" class="form-input" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="commentEmail" class="form-label">Email *</label>
+                                <input type="email" id="commentEmail" class="form-input" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="commentText" class="form-label">Your comment *</label>
+                            <textarea id="commentText" class="comment-textarea" placeholder="Share your thoughts on this Ethereum analysis..." required></textarea>
+                        </div>
+                        <button type="submit" class="comment-submit">Post Comment</button>
+                    </form>
+                </div>
+
+                <!-- Comments List -->
+                <div class="comments-list" id="commentsList">
+                    <!-- Sample Comments -->
+                    <div class="comment">
+                        <div class="comment-header">
+                            <div class="comment-author">
+                                <div class="author-avatar">JD</div>
+                                <div class="author-info">
+                                    <h4>John Doe</h4>
+                                    <span class="comment-time">2 hours ago</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comment-text">
+                            Great analysis! I've been watching Ethereum closely and this breakout does look very convincing. The volume confirmation is particularly encouraging.
+                        </div>
+                        <div class="comment-actions">
+                            <button class="comment-action" onclick="toggleReply(this)">
+                                <i class="far fa-reply"></i> Reply
+                            </button>
+                            <button class="comment-action" onclick="likeComment(this)">
+                                <i class="far fa-thumbs-up"></i> <span>2</span>
+                            </button>
+                        </div>
+                        <div class="reply-form">
+                            <textarea class="reply-textarea" placeholder="Write a reply..."></textarea>
+                            <button class="reply-submit" onclick="submitReply(this)">Reply</button>
+                        </div>
+                    </div>
+
+                    <div class="comment">
+                        <div class="comment-header">
+                            <div class="comment-author">
+                                <div class="author-avatar">SM</div>
+                                <div class="author-info">
+                                    <h4>Sarah Miller</h4>
+                                    <span class="comment-time">4 hours ago</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comment-text">
+                            What's your take on the potential resistance at $4,000? That seems like a major psychological level that could cause some consolidation.
+                        </div>
+                        <div class="comment-actions">
+                            <button class="comment-action" onclick="toggleReply(this)">
+                                <i class="far fa-reply"></i> Reply
+                            </button>
+                            <button class="comment-action" onclick="likeComment(this)">
+                                <i class="far fa-thumbs-up"></i> <span>1</span>
+                            </button>
+                        </div>
+                        <div class="reply-form">
+                            <textarea class="reply-textarea" placeholder="Write a reply..."></textarea>
+                            <button class="reply-submit" onclick="submitReply(this)">Reply</button>
+                        </div>
+                        <div class="replies">
+                            <div class="reply">
+                                <div class="comment-header">
+                                    <div class="comment-author">
+                                        <div class="author-avatar">NF</div>
+                                        <div class="author-info">
+                                            <h4>Neo Forecasts</h4>
+                                            <span class="comment-time">3 hours ago</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="comment-text">
+                                    Good point Sarah! $4,000 is indeed a key level to watch. If we see strong momentum through that level, it would confirm the bullish scenario.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="comment">
+                        <div class="comment-header">
+                            <div class="comment-author">
+                                <div class="author-avatar">MJ</div>
+                                <div class="author-info">
+                                    <h4>Mike Johnson</h4>
+                                    <span class="comment-time">6 hours ago</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comment-text">
+                            Thanks for the detailed analysis! Do you think the broader crypto market conditions will support this ETH rally?
+                        </div>
+                        <div class="comment-actions">
+                            <button class="comment-action" onclick="toggleReply(this)">
+                                <i class="far fa-reply"></i> Reply
+                            </button>
+                            <button class="comment-action" onclick="likeComment(this)">
+                                <i class="far fa-thumbs-up"></i> <span>0</span>
+                            </button>
+                        </div>
+                        <div class="reply-form">
+                            <textarea class="reply-textarea" placeholder="Write a reply..."></textarea>
+                            <button class="reply-submit" onclick="submitReply(this)">Reply</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div>
+                <div class="footer-brand">Neo Forecasts</div>
+                <p class="footer-description">Professional NeoWave market analysis and forecasting services. Helping traders and investors navigate complex market movements with precision and confidence.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
+                </div>
+            </div>
+            
+            <div>
+                <h4 class="footer-title">Services</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Market Analysis</a></li>
+                    <li><a href="#">Forecasting</a></li>
+                    <li><a href="#">Education</a></li>
+                    <li><a href="#">Premium Alerts</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h4 class="footer-title">Resources</h4>
+                <ul class="footer-links">
+                    <li><a href="#">NeoWave Guide</a></li>
+                    <li><a href="#">Market Reports</a></li>
+                    <li><a href="#">Trading Tools</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h4 class="footer-title">Company</h4>
+                <ul class="footer-links">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2024 Neo Forecasts. All rights reserved. Professional market analysis and forecasting services.</p>
+        </div>
+    </footer>
+
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+                header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.boxShadow = 'none';
+            }
+        });
+
+        // Post interaction functions
+        function toggleLike(button) {
+            const icon = button.querySelector('i');
+            const count = button.querySelector('span');
+            let currentCount = parseInt(count.textContent);
+            
+            if (button.classList.contains('liked')) {
+                button.classList.remove('liked');
+                icon.className = 'far fa-heart';
+                count.textContent = currentCount - 1;
+            } else {
+                button.classList.add('liked');
+                icon.className = 'fas fa-heart';
+                count.textContent = currentCount + 1;
+            }
+        }
+
+        function scrollToComments() {
+            document.getElementById('commentsSection').scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+
+        function sharePost(button) {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Ethereum Breaks Out of Downtrend - Neo Forecasts',
+                    text: 'Check out this detailed Ethereum analysis from Neo Forecasts',
+                    url: window.location.href
+                });
+            } else {
+                navigator.clipboard.writeText(window.location.href).then(() => {
+                    alert('Link copied to clipboard!');
+                });
+            }
+        }
+
+        // Comment system functions
+        function updateCommentCount() {
+            const comments = document.querySelectorAll('.comment').length;
+            document.getElementById('commentCount').textContent = comments;
+            document.getElementById('totalComments').textContent = comments;
+        }
+
+        function getInitials(name) {
+            return name.split(' ').map(word => word[0]).join('').toUpperCase();
+        }
+
+        function formatTime(date) {
+            const now = new Date();
+            const diffInMinutes = Math.floor((now - date) / (1000 * 60));
+            
+            if (diffInMinutes < 1) return 'Just now';
+            if (diffInMinutes < 60) return `${diffInMinutes} minutes ago`;
+            if (diffInMinutes < 1440) return `${Math.floor(diffInMinutes / 60)} hours ago`;
+            return `${Math.floor(diffInMinutes / 1440)} days ago`;
+        }
+
+        // Handle comment form submission
+        document.getElementById('commentForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('commentName').value;
+            const email = document.getElementById('commentEmail').value;
+            const text = document.getElementById('commentText').value;
+            
+            if (name && email && text) {
+                addComment(name, text);
+                this.reset();
+            }
+        });
+
+        function addComment(name, text) {
+            const commentsList = document.getElementById('commentsList');
+            const initials = getInitials(name);
+            const timeString = formatTime(new Date());
+            
+            const commentHTML = `
+                <div class="comment">
+                    <div class="comment-header">
+                        <div class="comment-author">
+                            <div class="author-avatar">${initials}</div>
+                            <div class="author-info">
+                                <h4>${name}</h4>
+                                <span class="comment-time">${timeString}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comment-text">${text}</div>
+                    <div class="comment-actions">
+                        <button class="comment-action" onclick="toggleReply(this)">
+                            <i class="far fa-reply"></i> Reply
+                        </button>
+                        <button class="comment-action" onclick="likeComment(this)">
+                            <i class="far fa-thumbs-up"></i> <span>0</span>
+                        </button>
+                    </div>
+                    <div class="reply-form">
+                        <textarea class="reply-textarea" placeholder="Write a reply..."></textarea>
+                        <button class="reply-submit" onclick="submitReply(this)">Reply</button>
+                    </div>
+                </div>
+            `;
+            
+            commentsList.insertAdjacentHTML('afterbegin', commentHTML);
+            updateCommentCount();
+            
+            // Scroll to the new comment
+            setTimeout(() => {
+                commentsList.firstElementChild.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'center'
+                });
+            }, 100);
+        }
+
+        function toggleReply(button) {
+            const comment = button.closest('.comment');
+            const replyForm = comment.querySelector('.reply-form');
+            
+            // Close all other reply forms
+            document.querySelectorAll('.reply-form.active').forEach(form => {
+                if (form !== replyForm) {
+                    form.classList.remove('active');
+                }
+            });
+            
+            replyForm.classList.toggle('active');
+            
+            if (replyForm.classList.contains('active')) {
+                replyForm.querySelector('.reply-textarea').focus();
+            }
+        }
+
+        function submitReply(button) {
+            const replyForm = button.closest('.reply-form');
+            const textarea = replyForm.querySelector('.reply-textarea');
+            const replyText = textarea.value.trim();
+            
+            if (replyText) {
+                const comment = replyForm.closest('.comment');
+                let repliesContainer = comment.querySelector('.replies');
+                
+                if (!repliesContainer) {
+                    repliesContainer = document.createElement('div');
+                    repliesContainer.className = 'replies';
+                    comment.appendChild(repliesContainer);
+                }
+                
+                const replyHTML = `
+                    <div class="reply">
+                        <div class="comment-header">
+                            <div class="comment-author">
+                                <div class="author-avatar">YU</div>
+                                <div class="author-info">
+                                    <h4>You</h4>
+                                    <span class="comment-time">Just now</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comment-text">${replyText}</div>
+                    </div>
+                `;
+                
+                repliesContainer.insertAdjacentHTML('beforeend', replyHTML);
+                textarea.value = '';
+                replyForm.classList.remove('active');
+                
+                // Scroll to the new reply
+                setTimeout(() => {
+                    repliesContainer.lastElementChild.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'center'
+                    });
+                }, 100);
+            }
+        }
+
+        function likeComment(button) {
+            const icon = button.querySelector('i');
+            const count = button.querySelector('span');
+            let currentCount = parseInt(count.textContent);
+            
+            if (button.classList.contains('liked')) {
+                button.classList.remove('liked');
+                icon.className = 'far fa-thumbs-up';
+                count.textContent = currentCount - 1;
+            } else {
+                button.classList.add('liked');
+                icon.className = 'fas fa-thumbs-up';
+                count.textContent = currentCount + 1;
+                button.style.color = '#3182ce';
+            }
+        }
+
+        // Initialize comment count on page load
+        updateCommentCount();
+    </script>
+</body>
+</html>
