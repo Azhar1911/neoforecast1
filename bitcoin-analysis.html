@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bitcoin Wave Structure Update - Neo Forecasts</title>
-    <meta name="description" content="Latest NeoWave analysis of Bitcoin showing complex correction patterns and potential triangle development with wave B targeting $156,000.">
+    <meta name="description" content="Detailed NeoWave analysis of Bitcoin showing flat pattern formation and triangle structure development.">
     
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -33,7 +33,6 @@
             --shadow-heavy: 0 20px 25px rgba(0,0,0,0.15);
             --gradient-primary: linear-gradient(135deg, #1a365d 0%, #2d5a87 100%);
             --gradient-accent: linear-gradient(135deg, #3182ce 0%, #2b77cb 100%);
-            --bitcoin-orange: #f7931a;
         }
 
         * {
@@ -128,36 +127,6 @@
             width: 100%;
         }
 
-        /* Hamburger Menu Styles */
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-            padding: 5px;
-            z-index: 1001;
-        }
-
-        .hamburger span {
-            width: 25px;
-            height: 3px;
-            background-color: var(--primary-color);
-            margin: 3px 0;
-            transition: 0.3s;
-            border-radius: 2px;
-        }
-
-        .hamburger.active span:nth-child(1) {
-            transform: rotate(-45deg) translate(-5px, 6px);
-        }
-
-        .hamburger.active span:nth-child(2) {
-            opacity: 0;
-        }
-
-        .hamburger.active span:nth-child(3) {
-            transform: rotate(45deg) translate(-5px, -6px);
-        }
-
         /* Blog Post Styles */
         .blog-post {
             padding: 120px 0 80px;
@@ -187,7 +156,6 @@
             margin-bottom: 2rem;
             font-size: 0.9rem;
             color: var(--text-light);
-            flex-wrap: wrap;
         }
 
         .breadcrumb a {
@@ -199,7 +167,6 @@
             text-decoration: underline;
         }
 
-        /* FIXED: Desktop meta layout to match S&P 500 post */
         .post-meta {
             display: flex;
             align-items: center;
@@ -207,29 +174,15 @@
             margin-bottom: 2rem;
             font-size: 0.9rem;
             color: var(--text-light);
-            flex-wrap: wrap;
         }
 
         .post-category {
-            background: var(--bitcoin-orange);
+            background: var(--gold-accent);
             color: white;
-            padding: 8px 16px;
+            padding: 6px 16px;
             border-radius: 20px;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             font-weight: 600;
-            white-space: nowrap;
-        }
-
-        .meta-item {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            white-space: nowrap;
-        }
-
-        .meta-item i {
-            font-size: 0.9rem;
-            color: var(--text-light);
         }
 
         .post-title {
@@ -256,13 +209,14 @@
             border: 1px solid var(--border-color);
         }
 
-        .neowave-chart {
+        .chart-image {
             width: 100%;
             max-width: 100%;
             height: auto;
             border-radius: 12px;
-            margin-bottom: 3rem;
+            margin: 2rem 0;
             box-shadow: var(--shadow-medium);
+            display: block;
         }
 
         .post-content p {
@@ -292,31 +246,6 @@
             box-shadow: var(--shadow-heavy);
         }
 
-        .price-target {
-            background: linear-gradient(135deg, var(--bitcoin-orange), #ff8c00);
-            color: white;
-            padding: 2rem;
-            border-radius: 16px;
-            text-align: center;
-            margin: 2rem 0;
-        }
-
-        .price-target h4 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .target-price {
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
-
-        .target-timeframe {
-            opacity: 0.9;
-            font-size: 1.1rem;
-        }
-
         /* Post Actions */
         .post-actions {
             display: flex;
@@ -326,7 +255,6 @@
             padding: 2rem 0;
             margin-top: 2rem;
             border-top: 1px solid var(--border-color);
-            flex-wrap: wrap;
         }
 
         .action-btn {
@@ -345,9 +273,9 @@
         }
 
         .action-btn:hover {
-            background: var(--bitcoin-orange);
+            background: var(--accent-color);
             color: white;
-            border-color: var(--bitcoin-orange);
+            border-color: var(--accent-color);
             transform: translateY(-2px);
         }
 
@@ -437,7 +365,7 @@
 
         .form-input:focus {
             outline: none;
-            border-color: var(--bitcoin-orange);
+            border-color: var(--accent-color);
         }
 
         .comment-textarea {
@@ -454,11 +382,11 @@
 
         .comment-textarea:focus {
             outline: none;
-            border-color: var(--bitcoin-orange);
+            border-color: var(--accent-color);
         }
 
         .comment-submit {
-            background: linear-gradient(135deg, var(--bitcoin-orange), #ff8c00);
+            background: var(--gradient-accent);
             color: white;
             border: none;
             padding: 12px 24px;
@@ -507,7 +435,7 @@
         .author-avatar {
             width: 40px;
             height: 40px;
-            background: linear-gradient(135deg, var(--bitcoin-orange), #ff8c00);
+            background: var(--gradient-accent);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -555,7 +483,7 @@
 
         .comment-action:hover {
             background: var(--border-color);
-            color: var(--bitcoin-orange);
+            color: var(--accent-color);
         }
 
         /* Reply Form */
@@ -584,7 +512,7 @@
         }
 
         .reply-submit {
-            background: var(--bitcoin-orange);
+            background: var(--accent-color);
             color: white;
             border: none;
             padding: 8px 16px;
@@ -595,7 +523,7 @@
         }
 
         .reply-submit:hover {
-            background: #e6890f;
+            background: var(--secondary-color);
         }
 
         /* Replies */
@@ -663,7 +591,7 @@
         }
 
         .social-link:hover {
-            background: var(--bitcoin-orange);
+            background: var(--accent-color);
             transform: translateY(-2px);
         }
 
@@ -702,112 +630,18 @@
             padding-right: 2rem;
         }
 
-        /* Mobile Menu Styles */
-        @media screen and (max-width: 768px) {
-            .hamburger {
-                display: flex;
-            }
-            
+        /* Responsive Design */
+        @media (max-width: 768px) {
             .nav-menu {
-                position: fixed;
-                left: -100%;
-                top: 80px;
-                flex-direction: column;
-                background: rgba(255, 255, 255, 0.98);
-                backdrop-filter: blur(10px);
-                width: 100%;
-                text-align: center;
-                transition: 0.3s;
-                box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
-                border-top: 1px solid var(--border-color);
-                padding: 2rem 0;
-                gap: 0;
-            }
-            
-            .nav-menu.active {
-                left: 0;
-            }
-            
-            .nav-menu li {
-                margin: 1rem 0;
-            }
-            
-            .nav-link {
-                font-size: 1.1rem;
-                padding: 1rem;
-                display: block;
-                border-radius: 8px;
-                margin: 0 2rem;
-                transition: all 0.3s ease;
-            }
-            
-            .nav-link:hover {
-                background-color: var(--bg-secondary);
-                color: var(--accent-color);
-            }
-
-            .nav-link::after {
                 display: none;
-            }
-
-            /* Mobile Post Header Improvements */
-            .post-header {
-                padding: 2rem 1.5rem;
             }
 
             .post-title {
                 font-size: 2.2rem;
-                line-height: 1.3;
-                margin-bottom: 1.5rem;
             }
 
-            .post-excerpt {
-                font-size: 1.1rem;
-                line-height: 1.7;
-            }
-
-            /* Improved Mobile Meta Section - SAME AS S&P 500 */
-            .post-meta {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 1rem;
-                margin-bottom: 2rem;
-            }
-
-            .meta-row {
-                display: flex;
-                align-items: center;
-                gap: 1rem;
-                width: 100%;
-                flex-wrap: wrap;
-            }
-
-            .post-category {
-                margin-bottom: 0.5rem;
-                align-self: flex-start;
-            }
-
-            .meta-item {
-                font-size: 0.9rem;
-                min-width: fit-content;
-            }
-
-            .breadcrumb {
-                flex-wrap: wrap;
-                gap: 0.3rem;
-                margin-bottom: 1.5rem;
-            }
-
-            .breadcrumb i {
-                font-size: 0.7rem;
-            }
-
-            .post-content {
-                padding: 2rem 1.5rem;
-            }
-
-            .comments-section {
-                padding: 2rem 1.5rem;
+            .post-header, .post-content, .comments-section {
+                padding: 2rem;
             }
 
             .footer-content {
@@ -820,72 +654,12 @@
                 gap: 1rem;
             }
 
-            .action-btn {
-                width: 100%;
-                justify-content: center;
-                padding: 15px 20px;
-            }
-
             .form-row {
                 grid-template-columns: 1fr;
             }
 
             .replies {
                 margin-left: 1rem;
-            }
-
-            .target-price {
-                font-size: 2rem;
-            }
-        }
-
-        /* Additional mobile optimizations */
-        @media screen and (max-width: 480px) {
-            .nav-container {
-                padding: 0 1rem;
-            }
-            
-            .logo {
-                font-size: 1.5rem;
-            }
-            
-            .logo-icon {
-                width: 35px;
-                height: 35px;
-                font-size: 1rem;
-            }
-
-            .post-container {
-                padding: 0 1rem;
-            }
-
-            .post-header {
-                padding: 1.5rem 1rem;
-            }
-
-            .post-title {
-                font-size: 1.8rem;
-            }
-
-            .post-content {
-                padding: 1.5rem 1rem;
-            }
-
-            .comments-section {
-                padding: 1.5rem 1rem;
-            }
-
-            .meta-item {
-                font-size: 0.85rem;
-            }
-
-            .post-category {
-                padding: 6px 12px;
-                font-size: 0.8rem;
-            }
-
-            .target-price {
-                font-size: 1.8rem;
             }
         }
     </style>
@@ -900,21 +674,12 @@
                 </div>
                 Neo Forecasts
             </a>
-            
-            <!-- Hamburger Menu Button -->
-            <div class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            
-            <!-- Navigation Menu -->
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="forecasts.html" class="nav-link">Forecasts</a></li>
-                <li><a href="services.html" class="nav-link">Services</a></li>
-                <li><a href="about.html" class="nav-link">About</a></li>
-                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            <ul class="nav-menu">
+                <li><a href="index.html#home" class="nav-link">Home</a></li>
+                <li><a href="index.html#forecasts" class="nav-link">Forecasts</a></li>
+                <li><a href="index.html#services" class="nav-link">Services</a></li>
+                <li><a href="index.html#about" class="nav-link">About</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -922,7 +687,7 @@
     <!-- Blog Post -->
     <main class="blog-post">
         <div class="post-container">
-            <a href="forecasts.html" class="back-button" data-aos="fade-right">
+            <a href="index.html" class="back-button" data-aos="fade-right">
                 <i class="fas fa-arrow-left"></i>
                 Back to Forecasts
             </a>
@@ -931,69 +696,49 @@
                 <nav class="breadcrumb">
                     <a href="index.html">Home</a>
                     <i class="fas fa-chevron-right"></i>
-                    <a href="forecasts.html">Forecasts</a>
+                    <a href="index.html#forecasts">Forecasts</a>
                     <i class="fas fa-chevron-right"></i>
                     <span>Bitcoin Analysis</span>
                 </nav>
 
                 <div class="post-meta">
-                    <span class="post-category">Crypto Analysis</span>
-                    <div class="meta-item">
-                        <i class="far fa-calendar"></i>
-                        <span>Dec 14, 2024</span>
-                    </div>
-                    <div class="meta-item">
-                        <i class="far fa-clock"></i>
-                        <span>4 min read</span>
-                    </div>
-                    <div class="meta-item">
-                        <i class="far fa-user"></i>
-                        <span>Neo Forecasts Team</span>
-                    </div>
+                    <span class="post-category">Crypto</span>
+                    <span><i class="far fa-calendar"></i> Dec 14, 2024</span>
+                    <span><i class="far fa-clock"></i> 4 min read</span>
+                    <span><i class="far fa-user"></i> Neo Forecasts Team</span>
                 </div>
 
                 <h1 class="post-title">Bitcoin Wave Structure Update</h1>
                 
-                <p class="post-excerpt">Latest NeoWave count suggests Bitcoin is completing a complex correction with multiple timeframe analysis revealing flat pattern formation and potential triangle development. Current analysis shows wave B targeting $156,000.</p>
+                <p class="post-excerpt">Latest NeoWave count suggests Bitcoin is completing a complex correction with multiple timeframe analysis revealing flat pattern formation and potential triangle development.</p>
             </article>
 
             <div class="post-content" data-aos="fade-up" data-aos-delay="200">
-                <img src="ChatGPT Image May 27, 2025, 11_59_26 AM.png" alt="Bitcoin NeoWave Chart Analysis" class="neowave-chart">
+                <p>I'm using two main charts:</p>
+                
+                <ol>
+                    <li>The 6-month chart, which shows the long-term trend since the beginning.</li>
+                    <li>The monthly chart, which focuses on price movements over the past few years.</li>
+                </ol>
 
-                <div class="price-target">
-                    <h4>Wave B Target Projection</h4>
-                    <div class="target-price">$156,000</div>
-                    <div class="target-timeframe">Expected completion: Q2-Q3 2025</div>
-                </div>
+                <img src="BTCUSD_2025-05-22_14-56-40.png" alt="Bitcoin 6-Month Chart Analysis" class="chart-image">
 
-                <p>Bitcoin's price action continues to unfold within a complex corrective pattern that began from the all-time highs. Our latest NeoWave analysis reveals that Bitcoin is completing a sophisticated flat correction with multiple timeframe considerations that suggest significant price targets ahead.</p>
+                <p>Looking at the 6-month chart, I think Bitcoin is following a "flat" pattern, which has three waves: A, B, and C. Right now, we're in wave B. I expect wave B to end around $156,000. If Bitcoin goes above that say, to $160,000 or $170,000 then this pattern probably isn't a flat, and we'd have to consider other possibilities.</p>
 
-                <p>The current structure exhibits characteristics of a flat pattern formation with potential triangle development in the final wave. This suggests we're approaching a critical decision point that could determine Bitcoin's direction for the next major cycle.</p>
+                <img src="BTCUSD_2025-05-22_15-01-35.png" alt="Bitcoin Monthly Chart Analysis" class="chart-image">
 
-                <p>On the higher timeframes, Bitcoin appears to be developing a complex correction that could take the form of a flat or triangle pattern. The key characteristic of this pattern is that wave B typically retraces between 90-140% of wave A, which aligns with our $156,000 target projection.</p>
+                <p>On the monthly chart, you can see the internal structure of waves A and B of the flat that you observed on the 6 monthly chart. Focusing on the recent uptrend that started in August 2024 from $49,000, from the point marked X towards the right end, we saw a strong move up to $108,000, then a drop to $74,000. I'm calling these moves A and B, and the current rally to new highs which is ongoing this very minute is labelled wave C.</p>
 
-                <p>The daily timeframe reveals a series of overlapping waves that support the corrective nature of the current move. The internal structure shows alternating patterns between simple and complex corrections, which is typical of flat formations.</p>
-
-                <p>Lower timeframes are providing early confirmation signals as momentum begins to shift. The completion of smaller degree patterns within the larger structure suggests we're approaching a significant inflection point.</p>
-
-                <p>The flat pattern formation in Bitcoin is particularly significant because it suggests that the overall bull market structure remains intact. Flat corrections are typically seen in strong trending markets and often precede powerful impulsive moves in the direction of the primary trend.</p>
-
-                <p>There's also a possibility that the current structure could develop into a triangle pattern, which would involve more sideways consolidation before the next major move. This scenario would extend the timeframe but ultimately lead to similar price objectives.</p>
-
-                <p>While the analysis points to higher targets, traders should be aware that complex corrections can be time-consuming and volatile. Proper risk management and patience are essential when trading these patterns.</p>
-
-                <p>The completion of this corrective phase would likely coincide with broader cryptocurrency market strength and could mark the beginning of the next major bull phase. The $156,000 target represents not just a technical projection but also a psychological level that could attract significant institutional interest.</p>
-
-                <p>This analysis aligns with the broader adoption trends and regulatory clarity that continue to support Bitcoin's long-term value proposition as digital gold and a store of value asset.</p>
+                <p>To figure out what pattern this is, I checked the weekly chart for internal details about the A and B that was followed after the X wave. It strongly looks like waves A and B are the first two legs of a triangle. If this is right, after the current rally ends, we should see a drop (wave D), followed by one last push upward (wave E).</p>
 
                 <div class="post-actions">
                     <button class="action-btn" onclick="toggleLike(this)">
                         <i class="far fa-heart"></i>
-                        <span>23</span>
+                        <span>22</span>
                     </button>
                     <button class="action-btn" onclick="scrollToComments()">
                         <i class="far fa-comment"></i>
-                        <span id="commentCount">5</span>
+                        <span id="commentCount">3</span>
                     </button>
                     <button class="action-btn" onclick="sharePost(this)">
                         <i class="fas fa-share"></i>
@@ -1006,7 +751,7 @@
             <div class="comments-section" id="commentsSection" data-aos="fade-up" data-aos-delay="400">
                 <div class="comments-header">
                     <h2 class="comments-title">Discussion</h2>
-                    <span class="comments-count"><span id="totalComments">5</span> comments</span>
+                    <span class="comments-count"><span id="totalComments">3</span> comments</span>
                 </div>
 
                 <!-- Comment Form -->
@@ -1037,69 +782,15 @@
                     <div class="comment">
                         <div class="comment-header">
                             <div class="comment-author">
-                                <div class="author-avatar">CR</div>
+                                <div class="author-avatar">JD</div>
                                 <div class="author-info">
-                                    <h4>Crypto Rider</h4>
+                                    <h4>John Doe</h4>
                                     <span class="comment-time">2 hours ago</span>
                                 </div>
                             </div>
                         </div>
                         <div class="comment-text">
-                            $156k target seems ambitious but your wave analysis is solid. The flat pattern makes sense given the current market structure. When do you expect wave C to complete?
-                        </div>
-                        <div class="comment-actions">
-                            <button class="comment-action" onclick="toggleReply(this)">
-                                <i class="far fa-reply"></i> Reply
-                            </button>
-                            <button class="comment-action" onclick="likeComment(this)">
-                                <i class="far fa-thumbs-up"></i> <span>7</span>
-                            </button>
-                        </div>
-                        <div class="reply-form">
-                            <textarea class="reply-textarea" placeholder="Write a reply..."></textarea>
-                            <button class="reply-submit" onclick="submitReply(this)">Reply</button>
-                        </div>
-                    </div>
-
-                    <div class="comment">
-                        <div class="comment-header">
-                            <div class="comment-author">
-                                <div class="author-avatar">BH</div>
-                                <div class="author-info">
-                                    <h4>Bitcoin Hodler</h4>
-                                    <span class="comment-time">4 hours ago</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="comment-text">
-                            Great analysis! The multiple timeframe approach really helps understand the bigger picture. Are you seeing any divergences in momentum indicators?
-                        </div>
-                        <div class="comment-actions">
-                            <button class="comment-action" onclick="toggleReply(this)">
-                                <i class="far fa-reply"></i> Reply
-                            </button>
-                            <button class="comment-action" onclick="likeComment(this)">
-                                <i class="far fa-thumbs-up"></i> <span>3</span>
-                            </button>
-                        </div>
-                        <div class="reply-form">
-                            <textarea class="reply-textarea" placeholder="Write a reply..."></textarea>
-                            <button class="reply-submit" onclick="submitReply(this)">Reply</button>
-                        </div>
-                    </div>
-
-                    <div class="comment">
-                        <div class="comment-header">
-                            <div class="comment-author">
-                                <div class="author-avatar">WT</div>
-                                <div class="author-info">
-                                    <h4>Wave Trader</h4>
-                                    <span class="comment-time">6 hours ago</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="comment-text">
-                            The triangle possibility is interesting. If it develops, how long do you think the consolidation phase could last?
+                            Great analysis! I've been watching Bitcoin closely and this flat pattern does look very convincing.
                         </div>
                         <div class="comment-actions">
                             <button class="comment-action" onclick="toggleReply(this)">
@@ -1118,49 +809,65 @@
                     <div class="comment">
                         <div class="comment-header">
                             <div class="comment-author">
-                                <div class="author-avatar">NI</div>
+                                <div class="author-avatar">SM</div>
                                 <div class="author-info">
-                                    <h4>Neo Investor</h4>
-                                    <span class="comment-time">8 hours ago</span>
+                                    <h4>Sarah Miller</h4>
+                                    <span class="comment-time">4 hours ago</span>
                                 </div>
                             </div>
                         </div>
                         <div class="comment-text">
-                            Love the detailed NeoWave analysis! The institutional interest at $156k makes perfect sense. Thanks for sharing your insights.
+                            What's your take on the potential resistance at $160,000? That seems like a major psychological level.
                         </div>
                         <div class="comment-actions">
                             <button class="comment-action" onclick="toggleReply(this)">
                                 <i class="far fa-reply"></i> Reply
                             </button>
                             <button class="comment-action" onclick="likeComment(this)">
-                                <i class="far fa-thumbs-up"></i> <span>5</span>
+                                <i class="far fa-thumbs-up"></i> <span>1</span>
                             </button>
                         </div>
                         <div class="reply-form">
                             <textarea class="reply-textarea" placeholder="Write a reply..."></textarea>
                             <button class="reply-submit" onclick="submitReply(this)">Reply</button>
                         </div>
+                        <div class="replies">
+                            <div class="reply">
+                                <div class="comment-header">
+                                    <div class="comment-author">
+                                        <div class="author-avatar">NF</div>
+                                        <div class="author-info">
+                                            <h4>Neo Forecasts</h4>
+                                            <span class="comment-time">3 hours ago</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="comment-text">
+                                    Good point Sarah! $160,000 is indeed a key level to watch.
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="comment">
                         <div class="comment-header">
                             <div class="comment-author">
-                                <div class="author-avatar">MA</div>
+                                <div class="author-avatar">MJ</div>
                                 <div class="author-info">
-                                    <h4>Market Analyst</h4>
-                                    <span class="comment-time">10 hours ago</span>
+                                    <h4>Mike Johnson</h4>
+                                    <span class="comment-time">6 hours ago</span>
                                 </div>
                             </div>
                         </div>
                         <div class="comment-text">
-                            The risk management aspect you mentioned is crucial. Complex corrections can indeed be volatile. What stop-loss levels would you recommend?
+                            Thanks for the detailed analysis! Do you think the broader crypto market conditions will support this BTC rally?
                         </div>
                         <div class="comment-actions">
                             <button class="comment-action" onclick="toggleReply(this)">
                                 <i class="far fa-reply"></i> Reply
                             </button>
                             <button class="comment-action" onclick="likeComment(this)">
-                                <i class="far fa-thumbs-up"></i> <span>4</span>
+                                <i class="far fa-thumbs-up"></i> <span>0</span>
                             </button>
                         </div>
                         <div class="reply-form">
@@ -1232,55 +939,6 @@
             duration: 800,
             easing: 'ease-in-out',
             once: true
-        });
-
-        // Mobile Menu Toggle Functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const hamburger = document.getElementById('hamburger');
-            const navMenu = document.getElementById('navMenu');
-            
-            // Toggle mobile menu
-            hamburger.addEventListener('click', function() {
-                hamburger.classList.toggle('active');
-                navMenu.classList.toggle('active');
-                
-                // Prevent body scroll when menu is open
-                if (navMenu.classList.contains('active')) {
-                    document.body.style.overflow = 'hidden';
-                } else {
-                    document.body.style.overflow = 'auto';
-                }
-            });
-            
-            // Close menu when clicking on nav links
-            document.querySelectorAll('.nav-link').forEach(link => {
-                link.addEventListener('click', function() {
-                    hamburger.classList.remove('active');
-                    navMenu.classList.remove('active');
-                    document.body.style.overflow = 'auto';
-                });
-            });
-            
-            // Close menu when clicking outside
-            document.addEventListener('click', function(event) {
-                const isClickInsideNav = navMenu.contains(event.target);
-                const isClickOnHamburger = hamburger.contains(event.target);
-                
-                if (!isClickInsideNav && !isClickOnHamburger && navMenu.classList.contains('active')) {
-                    hamburger.classList.remove('active');
-                    navMenu.classList.remove('active');
-                    document.body.style.overflow = 'auto';
-                }
-            });
-            
-            // Handle window resize
-            window.addEventListener('resize', function() {
-                if (window.innerWidth > 768) {
-                    hamburger.classList.remove('active');
-                    navMenu.classList.remove('active');
-                    document.body.style.overflow = 'auto';
-                }
-            });
         });
 
         // Header scroll effect
@@ -1486,7 +1144,7 @@
                 button.classList.add('liked');
                 icon.className = 'fas fa-thumbs-up';
                 count.textContent = currentCount + 1;
-                button.style.color = '#f7931a';
+                button.style.color = '#3182ce';
             }
         }
 
