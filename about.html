@@ -508,7 +508,9 @@
             border-radius: 8px;
             text-decoration: none;
             font-weight: 600;
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
             margin-top: 2rem;
             transition: all 0.3s ease;
             box-shadow: var(--shadow-medium);
@@ -517,6 +519,10 @@
         .cta-button:hover {
             transform: translateY(-2px);
             box-shadow: var(--shadow-heavy);
+        }
+
+        .cta-button i {
+            font-size: 1.2rem;
         }
 
         /* Footer */
@@ -766,7 +772,7 @@
                 <li><a href="forecasts.html" class="nav-link">Forecasts</a></li>
                 <li><a href="services.html" class="nav-link">Services</a></li>
                 <li><a href="about.html" class="nav-link active">About</a></li>
-                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -871,7 +877,7 @@
                 <div class="vision-visual" data-aos="fade-left">
                     <div class="vision-stats">
                         <div class="stat-item">
-                            <div class="stat-number">5+</div>
+                            <div class="stat-number">3+</div>
                             <div class="stat-label">Years of Experience</div>
                         </div>
                         <div class="stat-item">
@@ -879,7 +885,7 @@
                             <div class="stat-label">Forecast Accuracy</div>
                         </div>
                         <div class="stat-item">
-                            <div class="stat-number">3</div>
+                            <div class="stat-number">4</div>
                             <div class="stat-label">Market Specializations</div>
                         </div>
                         <div class="stat-item">
@@ -924,7 +930,10 @@
                 </div>
             </div>
             
-            <a href="index.html#services" class="cta-button" data-aos="fade-up" data-aos-delay="600">Join Our Community</a>
+            <a href="https://t.me/+cyFDN2uZ7IAyNzFh" target="_blank" class="cta-button" data-aos="fade-up" data-aos-delay="600">
+                <i class="fab fa-telegram"></i>
+                Join Our Telegram Community
+            </a>
         </div>
     </section>
 
