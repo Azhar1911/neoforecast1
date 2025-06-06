@@ -315,11 +315,12 @@
             opacity: 0.9;
         }
 
-        /* Enhanced Stats */
+        /* Enhanced Stats - Updated for 2 items */
         .hero-stats {
             display: flex;
             gap: 2rem;
             margin-top: 3rem;
+            justify-content: flex-start;
         }
 
         .stat-item {
@@ -331,6 +332,8 @@
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.2);
             transition: transform 0.3s ease;
+            flex: 1;
+            max-width: 200px;
         }
 
         .stat-item:hover {
@@ -880,6 +883,7 @@
             .stat-item {
                 flex: 1;
                 min-width: calc(50% - 0.5rem);
+                max-width: none;
             }
             
             .chart-container {
@@ -992,7 +996,7 @@
                 <li><a href="forecasts.html" class="nav-link">Forecasts</a></li>
                 <li><a href="services.html" class="nav-link">Services</a></li>
                 <li><a href="about.html" class="nav-link">About</a></li>
-                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="contact.html" class="nav-link">Contact Us</a></li>
             </ul>
         </nav>
     </header>
@@ -1033,10 +1037,6 @@
                         <div class="stat-item">
                             <div class="stat-number">3+</div>
                             <div class="stat-label">Years Experience</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number">10K+</div>
-                            <div class="stat-label">Successful Trades</div>
                         </div>
                     </div>
                 </div>
@@ -1099,7 +1099,7 @@
             <div class="posts-grid">
                 <article class="post-card featured" data-aos="fade-up">
                     <div class="post-image">
-                        <img src="image.jpg" alt="S&P 500 Market Forecast" style="width: 100%; height: 100%; object-fit: cover;">
+                        <img src="spx.jpg" alt="S&P 500 Market Forecast" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <div class="post-content">
                         <div class="post-meta">
@@ -1129,7 +1129,7 @@
                 
                 <article class="post-card" data-aos="fade-up" data-aos-delay="200">
                     <div class="post-image">
-                        <img src="image (2).jpg" alt="Ethereum Market Forecast" style="width: 100%; height: 100%; object-fit: cover;">
+                        <img src="ETHUSD_2025-05-27_18-57-22.png" alt="Ethereum Market Forecast" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <div class="post-content">
                         <div class="post-meta">
