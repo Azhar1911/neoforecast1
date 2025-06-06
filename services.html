@@ -209,16 +209,93 @@
             margin: 0 auto;
         }
 
-        /* Services Section */
-        .services-main {
+        /* Why Choose Us Section */
+        .why-choose {
             padding: 80px 0;
-            background: var(--bg-secondary);
+            background: white;
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 2rem;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .section-subtitle {
+            color: var(--text-secondary);
+            font-size: 1.2rem;
+            line-height: 1.6;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .benefit-card {
+            background: var(--bg-secondary);
+            padding: 2.5rem 2rem;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: var(--shadow-light);
+            transition: transform 0.3s ease;
+            border: 2px solid var(--border-color);
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-color);
+        }
+
+        .benefit-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--gradient-accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem;
+            font-size: 2rem;
+            color: white;
+            box-shadow: var(--shadow-medium);
+        }
+
+        .benefit-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+            font-family: 'Playfair Display', serif;
+        }
+
+        .benefit-description {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            font-size: 1.1rem;
+        }
+
+        /* Services Section */
+        .services-main {
+            padding: 80px 0;
+            background: var(--bg-secondary);
         }
 
         .service-card-single {
@@ -466,83 +543,6 @@
             box-shadow: var(--shadow-heavy);
         }
 
-        /* Why Choose Us Section */
-        .why-choose {
-            padding: 80px 0;
-            background: white;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-
-        .section-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 3rem;
-            font-weight: 700;
-            color: var(--primary-color);
-            margin-bottom: 1.5rem;
-        }
-
-        .section-subtitle {
-            color: var(--text-secondary);
-            font-size: 1.2rem;
-            line-height: 1.6;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .benefits-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .benefit-card {
-            background: var(--bg-secondary);
-            padding: 2.5rem 2rem;
-            border-radius: 16px;
-            text-align: center;
-            box-shadow: var(--shadow-light);
-            transition: transform 0.3s ease;
-            border: 2px solid var(--border-color);
-        }
-
-        .benefit-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--accent-color);
-        }
-
-        .benefit-icon {
-            width: 80px;
-            height: 80px;
-            background: var(--gradient-accent);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 2rem;
-            font-size: 2rem;
-            color: white;
-            box-shadow: var(--shadow-medium);
-        }
-
-        .benefit-title {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 1.5rem;
-            color: var(--primary-color);
-            font-family: 'Playfair Display', serif;
-        }
-
-        .benefit-description {
-            color: var(--text-secondary);
-            line-height: 1.7;
-            font-size: 1.1rem;
-        }
-
         /* Footer */
         .footer {
             background: var(--bg-dark);
@@ -773,7 +773,7 @@
                 <li><a href="forecasts.html" class="nav-link">Forecasts</a></li>
                 <li><a href="services.html" class="nav-link active">Services</a></li>
                 <li><a href="about.html" class="nav-link">About</a></li>
-                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -783,40 +783,6 @@
         <div class="page-header-content" data-aos="fade-up">
             <h1 class="page-title">Professional NeoWave Services</h1>
             <p class="page-subtitle">Get expert market analysis and forecasting services tailored to your trading needs. Professional NeoWave analysis for any financial instrument.</p>
-        </div>
-    </section>
-
-    <!-- Single Service Section -->
-    <section class="services-main">
-        <div class="container">
-            <div class="service-card-single" data-aos="fade-up">
-                <div class="service-icon-large">
-                    <i class="fas fa-chart-line"></i>
-                </div>
-                <h3 class="service-title-large">Free Custom Analysis</h3>
-                <p class="service-description-large">
-                    Get professional NeoWave analysis for any financial instrument completely free. Whether it's stocks, crypto, forex, or commodities - I provide detailed wave counts and forecasts with precision and expertise.
-                </p>
-                <div class="service-features-large">
-                    <div class="feature-item-large">
-                        <i class="fas fa-check-circle"></i>
-                        <span>Detailed Wave Structure Analysis</span>
-                    </div>
-                    <div class="feature-item-large">
-                        <i class="fas fa-check-circle"></i>
-                        <span>Price Target Projections</span>
-                    </div>
-                    <div class="feature-item-large">
-                        <i class="fas fa-check-circle"></i>
-                        <span>Risk Management Levels</span>
-                    </div>
-                    <div class="feature-item-large">
-                        <i class="fas fa-check-circle"></i>
-                        <span>100% Free Service</span>
-                    </div>
-                </div>
-                <button class="service-btn-large" onclick="openModal()">Request Free Analysis</button>
-            </div>
         </div>
     </section>
 
@@ -852,6 +818,40 @@
                     <h3 class="benefit-title">Expert Analysis</h3>
                     <p class="benefit-description">Years of experience in NeoWave theory and practical market application ensure professional-grade analysis you can trust.</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Single Service Section -->
+    <section class="services-main">
+        <div class="container">
+            <div class="service-card-single" data-aos="fade-up">
+                <div class="service-icon-large">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h3 class="service-title-large">Free Custom Analysis</h3>
+                <p class="service-description-large">
+                    Get professional NeoWave analysis for any financial instrument completely free. Whether it's stocks, crypto, forex, or commodities - I provide detailed wave counts and forecasts with precision and expertise.
+                </p>
+                <div class="service-features-large">
+                    <div class="feature-item-large">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Detailed Wave Structure Analysis</span>
+                    </div>
+                    <div class="feature-item-large">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Price Target Projections</span>
+                    </div>
+                    <div class="feature-item-large">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Risk Management Levels</span>
+                    </div>
+                    <div class="feature-item-large">
+                        <i class="fas fa-check-circle"></i>
+                        <span>100% Free Service</span>
+                    </div>
+                </div>
+                <button class="service-btn-large" onclick="openModal()">Request Free Analysis</button>
             </div>
         </div>
     </section>
